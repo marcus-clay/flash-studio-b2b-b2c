@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply font-inter font-semibold text-[3.5rem] leading-tight tracking-[-0.03em];
+  }
+  h2 {
+    @apply font-inter font-semibold text-3xl tracking-[-0.025em];
+  }
+  h3 {
+    @apply font-inter font-semibold text-xl tracking-[-0.025em];
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-content bg-white border border-gray-200;
+  }
+  
+  .button-primary {
+    @apply rounded-[1000px] bg-gradient-to-r from-[#0A66C2] to-[#0077B5] text-white 
+           hover:from-[#004182] hover:to-[#005885] shadow-lg shadow-blue-500/20 
+           hover:shadow-blue-500/30 transition-all duration-300;
+  }
+  
+  .button-secondary {
+    @apply rounded-[1000px] bg-white text-[#0A66C2] hover:bg-blue-50 
+           border border-[#0A66C2] transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#0A66C2] to-[#0077B5] bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient {
+    @apply bg-gradient-to-r from-[#0A66C2] to-[#0077B5];
+  }
+  
+  .ios-blur {
+    @apply backdrop-blur-xl bg-white/80;
+  }
+}
